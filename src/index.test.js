@@ -30,3 +30,19 @@ test('Flex', () => {
     }
   )
 })
+
+test('onClick', () => {
+  const component = shallowRender(<Flex onClick={10}/>)
+  assert.deepEqual(component.type, 'div')
+  assert.deepEqual(
+    component.props.style,
+    {
+      ...component.props.style,
+      display: 'flex;display:-webkit-flex;display:-ms-flexbox', children: undefined,
+    }
+  )
+  assert.deepEqual(
+    component.props.onClick,
+    10
+  )
+})

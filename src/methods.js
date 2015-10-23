@@ -3,6 +3,8 @@ import React, {PropTypes} from 'react'
 import * as prefixers from './prefixers'
 import compose from 'lodash/function/compose'
 import values from 'lodash/object/values'
+import pick from 'lodash/object/pick'
+import omit from 'lodash/object/omit'
 
 /**
  * Creates function for pipeing a style through all local prefixers
@@ -25,8 +27,10 @@ export function makeStyleComponentClass(display, displayName) {
       id: PropTypes.string,
     },
     render() {
+      const actions = pick(this.props, (value, name) => /^on/.test(name))
+      const noActions = omit(this.props, (value, name) => /^on/.test(name))
       const style = autoprefix({
-        ...this.props,
+        ...noActions,
         display,
         id: undefined,
         children: undefined,
@@ -35,6 +39,7 @@ export function makeStyleComponentClass(display, displayName) {
         <div
           id={this.props.id}
           style={style}
+          {...actions}
         >{this.props.children}</div>
       )
     },
