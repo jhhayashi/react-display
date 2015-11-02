@@ -5,5 +5,8 @@ node_js:
 before_install:
   - "npm i -g npm"
 script: "npm test"
+after_script:
+  - "npm run cov"
+  - "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
 notifications:
   email: false

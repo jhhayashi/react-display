@@ -4,7 +4,7 @@
   "description": "display components",
   "main": "lib/index.js",
   "scripts": {
-    "prestart": "npm prune && npm install",
+    "prestart": "npm prune && npm update && npm install",
     "start": "parallelshell 'npm run test:watch' 'npm outdated'",
     "clean": "rimraf lib",
     "prebuild": "npm test && npm run clean",
@@ -27,6 +27,7 @@
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
     "babel-eslint": "^4.1.3",
+    "coveralls": "^2.11.4",
     "eslint": "^1.7.2",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
