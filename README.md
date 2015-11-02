@@ -37,6 +37,6 @@ ExampleComponent.defaultProps = {
 export default ExampleComponent
 ```
 
-Display export the following components: `Block`, `Flex`, `InlineBlock`, `Table`, `TableRow`, `TableCell` and `Inline`.
+Display exports the following components: `Block`, `Flex`, `InlineBlock`, `Table`, `TableRow`, `TableCell` and `Inline`.
 
-Events callbacks (`onClick`, `onMouseEnter`, ...) are rewired accordingly.
+Events callbacks (`onClick`, `onMouseEnter`, ...) are forwarded to the underneath DOM element.
