@@ -6,7 +6,7 @@ This package is directly based on the work done by [Pete Hunt](https://github.co
 
 Install by using npm:
 ```bash
-$ npm install @luiscarli/display --save
+$ npm install react-display --save
 ```
 
 Display components allows you to define inline styles through components props.
@@ -14,7 +14,7 @@ Display components allows you to define inline styles through components props.
 Example:
 ```jsx
 import React, {PropTypes} from 'react'
-import {Block} from '@luiscarli/display'
+import {Block} from 'react-display'
 import defaultTheme from '../defaultTheme'
 
 const ExampleComponent = props => (
