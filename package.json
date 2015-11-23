@@ -1,6 +1,6 @@
 {
-  "name": "@luiscarli/display",
-  "version": "1.1.0",
+  "name": "react-display",
+  "version": "1.1.1",
   "description": "display components",
   "main": "lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/luiscarli/shallow-render"
+    "url": "https://github.com/luiscarli/react-display"
   },
   "author": "Luis Carli",
   "license": "MIT",
