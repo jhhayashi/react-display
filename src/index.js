@@ -10,6 +10,8 @@ import {makeStyleComponentClass} from './methods'
  * <Block margin={10}/> // <div style="display: block; margin: 10px;"/>
  */
 
+export {autoprefix} from './methods'
+
 export const Block = makeStyleComponentClass('block', 'Block')
 export const Flex = makeStyleComponentClass('flex', 'Flex')
 export const InlineBlock = makeStyleComponentClass('inline-block', 'InlineBlock')
