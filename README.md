@@ -38,10 +38,10 @@ import {Block} from 'react-display'
 
 The module has the following *named exports*.
 
-##### `<Block/>`, `<Flex/>`, `<InlineBlock/>`, `<Table/>`, `<TableRow/>`, `<TableCell/>` and `<Inline/>`
+##### ● `<Block/>`, `<Flex/>`, `<InlineBlock/>`, `<Table/>`, `<TableRow/>`, `<TableCell/>` and `<Inline/>`
 Those React components render `<div/>` with a css `display` attribute set according to the name of the component. All props defined on the component are prefixed and set as css style attributes, with the exception of event handling props like `onClick`, `onMouseEnter`, etc.
 
-##### `autoprefix(object)`
+##### ● `autoprefix(object)`
 Add vendor prefixes to an object of css style attributes.
 
 ```jsx
