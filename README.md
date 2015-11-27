@@ -28,8 +28,8 @@ import {Block} from 'react-display'
 ```
 ```jsx
 <Block
-  fontFamily: {theme.font}
-  fontSize: {theme.fontSize}
+  fontFamily={theme.font}
+  fontSize={theme.fontSize}
   onClick={handleClick}
 >
 ```
@@ -63,8 +63,8 @@ import defaultTheme from '../defaultTheme'
 
 const ExampleComponent = props => (
   <Block
-    fontFamily: {props.theme.font}
-    fontSize: {props.theme.fontSize}
+    fontFamily={props.theme.font}
+    fontSize={props.theme.fontSize}
     onClick={handleClick}
   >
     {props.text}
