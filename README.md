@@ -1,6 +1,6 @@
 ## Display Components
 
-[![Build Status](https://travis-ci.org/luiscarli/display.svg?branch=master)](https://travis-ci.org/luiscarli/display) [![Coverage Status](https://coveralls.io/repos/luiscarli/display/badge.svg?branch=master&service=github)](https://coveralls.io/github/luiscarli/display?branch=master)
+[![Build Status](https://travis-ci.org/luiscarli/react-display.svg?branch=master)](https://travis-ci.org/luiscarli/react-display)
 
 This package is directly based on the work done by [Pete Hunt](https://github.com/petehunt) on the [jsxstyle](https://github.com/petehunt/jsxstyle)
 
