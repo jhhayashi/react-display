@@ -9,9 +9,53 @@ Install by using npm:
 $ npm install react-display --save
 ```
 
-Display components allows you to define inline styles through components props.
+Display components allows you to define inline styles through components props, and also have then auto-prefixed for you.
 
-Example:
+Instead of doing
+```jsx
+<div
+  style={{
+    fontFamily: theme.fontFamily
+    fontSize: theme.fontSize
+  }}
+  onClick={handleClick}
+/>
+```
+
+You can do
+```jsx
+import {Block} from 'react-display'
+```
+```jsx
+<Block
+  fontFamily: {theme.font}
+  fontSize: {theme.fontSize}
+  onClick={handleClick}
+>
+```
+
+## API
+
+The module has the following *named exports*.
+
+##### `<Block/>`, `<Flex/>`, `<InlineBlock/>`, `<Table/>`, `<TableRow/>`, `<TableCell/>` and `<Inline/>`
+Those React components render `<div/>` with a css `display` attribute set according to the name of the component. All props defined on the component are prefixed and set as css style attributes, with the exception of event handling props like `onClick`, `onMouseEnter`, etc.
+
+##### `autoprefix(object)`
+Add vendor prefixes to an object of css style attributes.
+
+```jsx
+autoprefix({transition: 1})
+returns {
+  MozTransition: 1,
+  WebkitTransition: 1,
+  msTransition: 1,
+  transition: 1,
+}
+```
+
+## Example
+
 ```jsx
 import React, {PropTypes} from 'react'
 import {Block} from 'react-display'
@@ -21,6 +65,7 @@ const ExampleComponent = props => (
   <Block
     fontFamily: {props.theme.font}
     fontSize: {props.theme.fontSize}
+    onClick={handleClick}
   >
     {props.text}
   </Block>
@@ -36,7 +81,3 @@ ExampleComponent.defaultProps = {
 
 export default ExampleComponent
 ```
-
-Display exports the following components: `Block`, `Flex`, `InlineBlock`, `Table`, `TableRow`, `TableCell` and `Inline`.
-
-Events callbacks (`onClick`, `onMouseEnter`, ...) are forwarded to the underneath DOM element.
