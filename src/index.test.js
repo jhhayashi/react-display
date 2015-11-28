@@ -5,7 +5,7 @@ import assert from 'assert'
 import React from 'react'
 import shallowRender from '@luiscarli/shallow-render'
 
-import {Block, Flex} from './'
+import {Block, Flex, Row, Column, Main} from './'
 
 test('Block', () => {
   const component = shallowRender(<Block margin={10}/>)
@@ -45,4 +45,27 @@ test('onClick', () => {
     component.props.onClick,
     10
   )
+})
+test('Row', () => {
+  const component = shallowRender(
+    <Row/>
+  )
+  assert.deepEqual(component.type, 'div')
+  assert.deepEqual(component.props.style.flexDirection, 'row')
+})
+test('Column', () => {
+  const component = shallowRender(
+    <Column/>
+  )
+  assert.deepEqual(component.type, 'div')
+  assert.deepEqual(component.props.style.flexDirection, 'column')
+})
+test('Main', () => {
+  const component = shallowRender(
+    <Main/>
+  )
+  assert.deepEqual(component.type, 'div')
+  assert.deepEqual(component.props.style.flexDirection, 'column')
+  assert.deepEqual(component.props.style.top, 0)
+  assert.deepEqual(component.props.style.left, 0)
 })

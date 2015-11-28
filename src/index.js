@@ -14,8 +14,30 @@ export {autoprefix} from './methods'
 
 export const Block = makeStyleComponentClass('block', 'Block')
 export const Flex = makeStyleComponentClass('flex', 'Flex')
+export const InlineFlex = makeStyleComponentClass('inline-flex', 'InlineFlex')
 export const InlineBlock = makeStyleComponentClass('inline-block', 'InlineBlock')
 export const Table = makeStyleComponentClass('table', 'Table')
 export const TableRow = makeStyleComponentClass('table-row', 'TableRow')
 export const TableCell = makeStyleComponentClass('table-cell', 'TableCell')
 export const Inline = makeStyleComponentClass('inline', 'Inline')
+
+export const Row = makeStyleComponentClass(
+  'flex', 'Row',
+  {flexDirection: 'row'}
+)
+export const Column = makeStyleComponentClass(
+  'flex', 'Column',
+  {flexDirection: 'column'}
+)
+export const Main = makeStyleComponentClass(
+  'flex', 'Column',
+  {
+    flexDirection: 'column',
+    bottom: 0,
+    left: 0,
+    overflow: 'scroll',
+    position: 'absolute',
+    right: 0,
+    top: 0,
+  }
+)
