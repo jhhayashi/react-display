@@ -30,7 +30,7 @@ export const Column = makeStyleComponentClass(
   {flexDirection: 'column'}
 )
 export const Main = makeStyleComponentClass(
-  'flex', 'Column',
+  'flex', 'Main',
   {
     flexDirection: 'column',
     bottom: 0,
