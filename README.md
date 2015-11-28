@@ -38,8 +38,41 @@ import {Block} from 'react-display'
 
 The module has the following *named exports*.
 
-##### ● `<Block/>`, `<Flex/>`, `<InlineBlock/>`, `<Table/>`, `<TableRow/>`, `<TableCell/>` and `<Inline/>`
+##### ● `<Block/>`, `<Flex/>`, `<Table/>`, `<TableRow/>`, `<TableCell/>`, `<Inline/>`, `<InlineBlock/>` and `<InlineFlex/>`
 Those React components render `<div/>` with a css `display` attribute set according to the name of the component. All props defined on the component are prefixed and set as css style attributes, with the exception of event handling props like `onClick`, `onMouseEnter`, etc.
+
+```jsx
+<Flex/>
+// is the same as
+<div
+  style={{
+    display: 'flex'
+  }}
+/>
+```
+
+##### ● `<Column/>`
+Creates a `<Flex/>` component with `flexDirection` set to `column`
+
+##### ● `<Row/>`
+Creates a `<Flex/>` component with `flexDirection` set to `row`
+
+##### ● `<Main/>`
+Creates a component with the following style:
+```jsx
+{
+  display: 'flex',
+  flexDirection: 'column'
+  bottom: 0,
+  left: 0,
+  overflow: 'scroll',
+  position: 'absolute',
+  right: 0,
+  top: 0,
+}
+```
+
+This component is good as the root component of a web app.
 
 ##### ● `autoprefix(object)`
 Add vendor prefixes to an object of css style attributes.
