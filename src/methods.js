@@ -19,7 +19,7 @@ export const autoprefix = compose(...values(prefixers))
  * @param  {string} displayName component displayName value
  * @return {ReactComponent}
  */
-export function makeStyleComponentClass(display, displayName) {
+export function makeStyleComponentClass(display, displayName, defaultStyle) {
   return React.createClass({
     displayName: displayName,
     propTypes: {
@@ -30,6 +30,7 @@ export function makeStyleComponentClass(display, displayName) {
       const actions = pick(this.props, (value, name) => /^on/.test(name))
       const noActions = omit(this.props, (value, name) => /^on/.test(name))
       const style = autoprefix({
+        ...defaultStyle,
         ...noActions,
         display,
         id: undefined,
