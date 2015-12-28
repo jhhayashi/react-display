@@ -23,21 +23,31 @@ export const Inline = makeStyleComponentClass('inline', 'Inline')
 
 export const Row = makeStyleComponentClass(
   'flex', 'Row',
-  {flexDirection: 'row'}
+  {
+    flexDirection: 'row',
+    flexShrink: 0,
+    WebkitOverflowScrolling: 'touch',
+  }
 )
 export const Column = makeStyleComponentClass(
   'flex', 'Column',
-  {flexDirection: 'column'}
+  {
+    flexDirection: 'column',
+    flexShrink: 0,
+    WebkitOverflowScrolling: 'touch',
+  }
 )
 export const Main = makeStyleComponentClass(
   'flex', 'Main',
   {
-    flexDirection: 'column',
     bottom: 0,
+    flexDirection: 'column',
+    flexShrink: 0,
     left: 0,
     overflow: 'scroll',
     position: 'absolute',
     right: 0,
     top: 0,
+    WebkitOverflowScrolling: 'touch',
   }
 )
