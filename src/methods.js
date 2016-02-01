@@ -21,7 +21,7 @@ export const autoprefix = flowRight(...values(prefixers))
  */
 export function makeStyleComponentClass(display, displayName, defaultStyle) {
   return React.createClass({
-    displayName: displayName,
+    displayName,
     propTypes: {
       children: PropTypes.node,
       id: PropTypes.string,

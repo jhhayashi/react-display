@@ -130,7 +130,7 @@ export function displayFlex(style) {
   if (style.display === 'flex') {
     return {
       ...style,
-      display: style.display + ';display:-webkit-flex;display:-ms-flexbox',
+      display: `${style.display};display:-webkit-flex;display:-ms-flexbox`,
     }
   }
   return style
