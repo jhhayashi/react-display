@@ -5,22 +5,15 @@ before_install:
 - npm i -g npm
 notifications:
   email: false
-
-## PACKAGE RELEASE ($ travis setup npm)
-# before_deploy:
-# - npm run bates -- lib
-# - npm run bates -- dist
-# after_deploy:
-# - npm run bates -- githubRelease
-# deploy:
-#   skip_cleanup: true
-#   on:
-#     branch: master
-
-## SITE DEPLOY
-# deploy:
-#   skip_cleanup: true
-#   provider: script
-#   script: npm run bates -- deploy
-#   on:
-#     branch: master
+before_deploy:
+- npm run bates -- lib
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: info@luiscarli.com
+  api_key:
+    secure: QsM1F3JU8KsqODQc7jVsnVD0bhHKHUPok/BgLgharAjyVSUcqQr2/BWd3mAVl7Tx5GAmjupBTnpCueQ1BO+KImY+U+EAemKmXq+kKShX4AI2r6lGPVs41aOqMT27JRzIGrCxrakBo5U42FTIHjF27J63YoxSrd0dMBtFOm6FRv8L81Mpo1D5pqfYaZ8ISqJ6GY+YJVfYV7Cr8fmOm+S/MIA2nRMi4EUOtERz1F2hnwMvV0QpEhYRE3R0VlsJaMnxxMJDL9jRTgcVmPKwxwItacBL2qPQAVjTpqcACF8Ab9UBMgCgfoQFIDNgeYYZc5soQu6Po1EWu/NXBldBgIYTzCEeuAxYf65IbAuu6asb2+NGisuDx1wvR0O9LnIan48iq+t4jrhIonEQUBJ1JxLkys8MlHk5KfGBSJfa2iG3ECNEiOhs6G1XmGf2ITWZFAiUTBJn7Q3l+O0QHZDjYsYGVkbgQGclTMuxjnngd6u8yWWAMzl50AslB2/ikQxRzw6JmUBlU1w9vQxV6dX51zVt7o85MqPj2NPQR6Gp02zQcoZkio3ywl0hrW0eaNgcwhjhg0D4Lmrphn3pQZ3BpOFOGLDMH2cmOIPqZmVWms/dHcewiZY20Pi4VQLfMw4Og4wwVqT+Br6paqbxRa5fv4EvTUeJaiV9EK3OudJNtqdQTmc=
+  on:
+    tags: true
+    repo: luiscarli/react-display
+    branch: master
