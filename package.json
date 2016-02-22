@@ -1,6 +1,6 @@
 {
   "name": "react-display",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "React components for helping with inline styling",
   "main": "lib/index.js",
   "scripts": {
