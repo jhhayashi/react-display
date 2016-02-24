@@ -1,17 +1,13 @@
 import React, {PropTypes} from 'react'
 
-import * as prefixers from './prefixers'
-import flowRight from 'lodash/flowRight'
-import values from 'lodash/values'
-import pickBy from 'lodash/pickBy'
-import omitBy from 'lodash/omitBy'
+import {autoprefix} from './prefixers'
+import _ from 'lodash'
 
 /**
  * Creates function for pipeing a style through all local prefixers
  * @param  {object} style
  * @return {object}          prefixed style object
  */
-export const autoprefix = flowRight(...values(prefixers))
 
 /**
  * Returns a React component that converts props into autoprefixed style, with a specific display value
@@ -27,8 +23,8 @@ export function makeStyleComponentClass(display, displayName, defaultStyle) {
       id: PropTypes.string,
     },
     render() {
-      const actions = pickBy(this.props, (value, name) => /^on/.test(name))
-      const noActions = omitBy(this.props, (value, name) => /^on/.test(name))
+      const actions = _.pickBy(this.props, (value, name) => /^on/.test(name))
+      const noActions = _.omitBy(this.props, (value, name) => /^on/.test(name))
       const style = autoprefix({
         display,
         ...defaultStyle,

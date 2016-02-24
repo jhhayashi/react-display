@@ -25,7 +25,7 @@ export const Row = makeStyleComponentClass(
   'flex', 'Row',
   {
     flexDirection: 'row',
-    flex: '1 0',
+    flexShrink: 0,
     WebkitOverflowScrolling: 'touch',
   }
 )
@@ -33,7 +33,7 @@ export const Column = makeStyleComponentClass(
   'flex', 'Column',
   {
     flexDirection: 'column',
-    flex: '1 0',
+    flexShrink: 0,
     WebkitOverflowScrolling: 'touch',
   }
 )
