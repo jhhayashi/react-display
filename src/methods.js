@@ -30,9 +30,9 @@ export function makeStyleComponentClass(display, displayName, defaultStyle) {
       const actions = pickBy(this.props, (value, name) => /^on/.test(name))
       const noActions = omitBy(this.props, (value, name) => /^on/.test(name))
       const style = autoprefix({
+        display,
         ...defaultStyle,
         ...noActions,
-        display,
         id: undefined,
         children: undefined,
       })
