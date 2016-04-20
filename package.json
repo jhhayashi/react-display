@@ -15,16 +15,16 @@
   "author": "Luis Carli",
   "license": "MIT",
   "devDependencies": {
-    "bates": "^0.2.8"
+    "bates": "^2.0.0"
   },
   "dependencies": {
     "lodash": "^4.1.0"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^15.0.0"
   },
   "engines": {
-    "node": ">=0.12.0",
+    "node": ">=15.0.0",
     "npm": "^3.3.0"
   }
 }
