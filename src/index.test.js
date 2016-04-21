@@ -26,7 +26,7 @@ test('Flex', () => {
     component.props.style,
     {
       ...component.props.style,
-      display: 'flex;display:-webkit-flex;display:-ms-flexbox', margin: 10, children: undefined,
+      display: 'flex', margin: 10, children: undefined,
     }
   )
 })
@@ -38,7 +38,7 @@ test('onClick', () => {
     component.props.style,
     {
       ...component.props.style,
-      display: 'flex;display:-webkit-flex;display:-ms-flexbox', children: undefined,
+      display: 'flex', children: undefined,
     }
   )
   assert.deepEqual(

@@ -81,9 +81,5 @@ export function autoprefix(style) {
     })
   }
 
-  if (style.display === 'flex') {
-    style.display = `${style.display};display:-webkit-flex;display:-ms-flexbox`
-  }
-
   return style
 }
