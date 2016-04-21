@@ -8,7 +8,7 @@ notifications:
 before_deploy:
 - npm run bates -- lib
 after_deploy:
-- node src/release/githubRelease
+- npm run bates -- githubRelease
 deploy:
   skip_cleanup: true
   provider: npm
