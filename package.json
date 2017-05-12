@@ -21,7 +21,8 @@
     "lodash": "^4.1.0"
   },
   "peerDependencies": {
-    "react": "^15.0.0"
+    "react": "^15.0.0",
+    "prop-types": "^15.5.10"
   },
   "engines": {
     "node": ">=15.0.0",
